@@ -9,5 +9,6 @@ module.exports = {
   coverageReporters: ['text-summary', 'text', 'lcov'],
   coverageThreshold: {
     './src/domain/': { lines: 80, branches: 80, functions: 80, statements: 80 },
+    './src/application/': { lines: 80, branches: 80, functions: 80, statements: 80 },
   },
 };
