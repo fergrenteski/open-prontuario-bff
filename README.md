@@ -199,14 +199,14 @@ Em nuvem, o frontend chama o BFF **pelo API Gateway** (`https://<apim>.azure-api
 ### Docker
 
 ```bash
-docker build -t <usuario>/pjbl/bff:<tag> .
-docker run --rm -p 3000:3000 --env-file .env <usuario>/pjbl/bff:<tag>
+docker build -t <usuario>/pjbl-bff:<tag> .
+docker run --rm -p 3000:3000 --env-file .env <usuario>/pjbl-bff:<tag>
 ```
 
 A imagem usa `NODE_ENV=production`, roda como usuário `node` e tem `HEALTHCHECK` em `/api/health`.
 Com `NODE_ENV=production` e `AUTH_MODE=dev`, o processo **não sobe** a menos que
 `ALLOW_DEV_AUTH_IN_PRODUCTION=true` (apenas para demonstração). Publicação no Docker Hub
-(`docker login` + `docker push <usuario>/pjbl/bff:<tag>`) é feita manualmente pelo grupo.
+(`docker login` + `docker push <usuario>/pjbl-bff:<tag>`) é feita manualmente pelo grupo.
 
 ## Variáveis de ambiente
 
